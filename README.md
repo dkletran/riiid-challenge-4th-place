@@ -29,11 +29,9 @@ Python packages are detailed separately in `requirements.txt` in each of the fol
 - Model Inference  (Kaggle Submission Notebook): all requirements are already met.
 # Steps to produce the solution
 - Data preparation:
-	1) Copy raw data to the working directory. All raw files are from the competition website https://www.kaggle.com/c/riiid-test-answer-prediction, except for the train data which is in pickle pandas format (to be read faster) and  can be found here https://www.kaggle.com/rohanrao/tutorial-on-reading-large-datasets/data
-	2) Copy all python scripts in data_preparation/ to the working directory. Unzip the file *riiid_train.pkl.gzip.zip*
+	1) Copy raw data to the working directory. All raw files are from the competition website https://www.kaggle.com/c/riiid-test-answer-prediction, except for the train data (*riiid_train.pkl.gzip*) which is in pickle pandas format (to be read faster) and  can be found here https://www.kaggle.com/rohanrao/tutorial-on-reading-large-datasets/data
 
-			unzip riiid_train.pkl.gzip.zip
-	3) Execute the scripts
+	2) Execute the scripts
 	
 			python data_prepare.py
 			python train_valid_split.py
@@ -48,11 +46,11 @@ Python packages are detailed separately in `requirements.txt` in each of the fol
 	-	**tfrecords/\*/\*** :  output of **tfrecords_create.py**,  tfrecords files for training on TPU. Three sets of files are created : for train, for valid (from 			the train/valid split step) and for the whole train data.
 	-	**data_map.pickle** : zipped output of **data_map_create.py**, needed in the submission kernel.
 		
-	4) Copy tfrecords files to a GCS bucket for training:
+	3) Copy tfrecords files to a GCS bucket for training:
 
 			gsutil -m cp -r tfrecords/* YOUR_GCS_DATA_PATH
 		
-	5) Store the following output files for model training and inference : *encoded_content_id_map.json, encoded_content_map_v2.json, data_map.pickle*
+	4) Store the following output files for model training and inference : *encoded_content_id_map.json, encoded_content_map_v2.json, data_map.pickle*
 - Model training:
 	1) Copy all python codes from modeling_training/ to the working directory
 	2) Copy the file encoded_content_map_v2.json to the working directory
