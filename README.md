@@ -69,7 +69,7 @@ Python packages are detailed separately in `requirements.txt` in each of the fol
 			python training.py
 	Output files (*weights.h5* and *training.log*) should be found in the working directory.
 	
-	5) Store *weights.h5* for inference step. 
+	5) Store *weights.h5* for the inference step. 
 - Inference (Kaggle Submission Notebook): Code source for inference notebook is submission/**riiid-model-submission-4th-solution.ipynb**.  The following files must be put in the input data of the submission notebook:  *modeling.py, model_config.py, encoded_content_map_v2.json, encoded_content_id_map.json, data_map.pickle*
 	
 # Links
