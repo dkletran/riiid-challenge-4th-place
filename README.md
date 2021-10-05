@@ -76,3 +76,4 @@ Python packages are detailed separately in `requirements.txt` in each of the fol
 - Here is a Colab Notebook for data preparation https://colab.research.google.com/drive/1WxoPMzmYywMOfqkM3xiRLqCChDWGL1T5?usp=sharing
 - Here is a Colab Notebook for model training https://colab.research.google.com/drive/1VhtEkTULq7SnMcl8WIbAToXGBRLEGXir?usp=sharing
 - Kaggle Submission Notebook https://www.kaggle.com/letranduckinh/riiid-model-submission-4th-place-public-version
+- Here is the solution summary on arxiv.org https://arxiv.org/abs/2102.04250
